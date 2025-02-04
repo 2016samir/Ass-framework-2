@@ -1,0 +1,15 @@
+<div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-28">
+    @for (meal of AllMeals; track $index) {
+    <div class="text-center duration-300 bg-white hover:scale-105 hover:shadow-sm rounded-3xl">
+        <img [src]="meal.strMealThumb" class="w-[130px] h-[130px] rounded-full mx-auto -translate-y-[50%] hover:rotate-[360deg] transition-all duration-700" alt="photo">
+        <h2 class="text-[30px] font-bold -translate-y-[100%]">{{meal.strMeal}}</h2>
+        <div class="text-[#059669] font-serif -translate-y-[100%]">
+            <i class="fa-solid fa-earth-americas" ></i>
+            <span class="ms-3">{{meal.strArea}}</span>
+        </div>
+        <button type="button" class="text-white bg-[#21BA75] hover:bg-[#059669] hover:scale-110 transition-all duration-300 font-bold rounded-full text-[16px] px-5 py-4 text-center mb-4">
+         <a href="display">   View Recipe </a>
+        </button>
+    </div>
+}
+</div>

@@ -1,0 +1,9 @@
+<div class="grid gap-x-6 gap-y-28 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+@for (meal of mealsCat; track $index) {
+    <div class="text-center duration-300 bg-white hover:scale-105 hover:shadow-sm rounded-3xl">
+        <img [src]="meal.strMealThumb" class="w-[130px] h-[130px] rounded-full mx-auto -translate-y-[50%] hover:rotate-[360deg] transition-all duration-700" alt="photo">
+        <h2 class="text-[30px] font-bold -translate-y-[100%]">{{meal.strMeal.slice(0,9)}}</h2>
+        <button type="button" class="text-white bg-[#21BA75] hover:bg-[#059669] hover:scale-110 transition-all duration-300 font-bold rounded-full text-[16px] px-5 py-4 text-center mb-4">View Recipe</button>
+    </div>
+}
+        </div>
